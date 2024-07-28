@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jwt_decoder/jwt_decoder.dart';
 import '../../router/index.dart';
 import '../service/index.dart';
 import '../../utils/HttpUtil .dart';
@@ -31,7 +30,7 @@ class LaunchPageState extends State<LaunchPage> {
               HttpUtil.getInstance().setToken(token);
               Provider.of<UserInfoProvider>(context,listen: false).setUserInfo(UserInfoModel.fromJson(data.data));
             }
-            Routes.router.navigateTo(context, '/MusicIndexPage',replace: true);
+            Routes.router.navigateTo(context, '/MovieIndexPage',replace: true);
           });
         }else{// 没有登录
           Routes.router.navigateTo(context, '/LoginPage',replace: true);

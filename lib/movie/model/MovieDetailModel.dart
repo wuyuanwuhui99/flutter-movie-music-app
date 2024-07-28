@@ -1,9 +1,9 @@
 class MovieDetailModel {
   int id; //主键
-  int movieId; //电影id
+  int? movieId; //电影id
   String movieName; //电影名称
-  String director; //导演
-  String star; //主演
+  String? director; //导演
+  String? star; //主演
   String? type; //类型
   String? countryLanguage; //国家/语言
   String? viewingState; //观看状态
@@ -16,7 +16,7 @@ class MovieDetailModel {
   String sourceName; //来源名称，本地，骑士影院，爱奇艺
   String? sourceUrl; //来源地址
   String createTime; //创建时间
-  String? localImg; //本地图片
+  String localImg; //本地图片
   String? label; //标签
   String? description; //简单描述
   String? useStatus; //0代表未使用，1表示正在使用，是banner和carousel图的才有
@@ -29,10 +29,10 @@ class MovieDetailModel {
   MovieDetailModel(
       {
         required this.id,
-        required this.movieId,
+        this.movieId,
         required this.movieName,
-        required this.director,
-        required this.star,
+        this.director,
+        this.star,
       this.type,
       this.countryLanguage,
       this.viewingState,
@@ -45,7 +45,7 @@ class MovieDetailModel {
         required this.sourceName,
       this.sourceUrl,
         required this.createTime,
-      this.localImg,
+      required this.localImg,
       this.label,
       this.description,
       this.useStatus,

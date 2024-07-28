@@ -46,6 +46,8 @@ dependencies:
   jwt_decoder: ^2.0.1
   crypto: ^3.0.3
   convert: ^3.1.1
+  carousel_slider: ^4.2.1
+  webview_flutter: ^4.8.0
 
 dev_dependencies:
   flutter_test:
@@ -108,6 +110,7 @@ flutter:
     - lib/assets/images/icon_user.svg
     - lib/assets/images/icon_view.svg
     - lib/assets/images/icon_password.svg
+    - lib/assets/images/icon_hot.png
     - lib/assets/images/icon_classify.png
     - lib/assets/images/icon_top.png
     - lib/assets/images/icon_play.png

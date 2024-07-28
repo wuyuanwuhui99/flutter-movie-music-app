@@ -5,7 +5,7 @@ import '../../router/index.dart';
 import '../service/index.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../../utils/crypto.dart';
-import '../pages/MusicIndexPage.dart';
+import '../pages/MovieIndexPage.dart';
 import '../provider/UserInfoProvider.dart';
 import 'package:provider/provider.dart';
 import '../../utils/LocalStorageUtils.dart';

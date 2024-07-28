@@ -14,11 +14,11 @@ import '../../theme/ThemeColors.dart';
 import '../../theme/ThemeSize.dart';
 import '../model/UserInfoModel.dart';
 
-class MusicIndexPage extends StatefulWidget {
-  MusicIndexPageState createState() => MusicIndexPageState();
+class MovieIndexPage extends StatefulWidget {
+  MovieIndexPageState createState() => MovieIndexPageState();
 }
 
-class MusicIndexPageState extends State<MusicIndexPage> {
+class MovieIndexPageState extends State<MovieIndexPage> {
   int _currentIndex = 0;
   List<Widget?> pages = [null, null, null, null];
 
