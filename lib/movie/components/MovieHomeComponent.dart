@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
+import '../../theme/ThemeColors.dart';
 import '../../utils/common.dart';
 import '../service/index.dart';
 import '../components/SearchCommponent.dart';
@@ -24,21 +25,16 @@ class MovieHomeComponentState extends State<MovieHomeComponent>
   @override
   bool get wantKeepAlive => true;
 
-  List<Widget> categoryList = [];
+  List<CategoryModel> categoryList = [];
 
   List<CategoryModel> allCategoryLists = [];
 
-  int pageNum = 1;
+  EasyRefreshController easyRefreshController = EasyRefreshController();
 
   void _getCategoryItem() {
-    if (pageNum < allCategoryLists.length) {
+    if (categoryList.length < allCategoryLists.length) {
       setState(() {
-        CategoryModel item = allCategoryLists[pageNum];
-        categoryList.add(CategoryComponent(
-          key: GlobalKey(),
-          category: item.category,
-          classify: item.classify,
-        ));
+        categoryList.add(allCategoryLists[categoryList.length]);
       });
     }
   }
@@ -50,12 +46,7 @@ class MovieHomeComponentState extends State<MovieHomeComponent>
         allCategoryLists.add(CategoryModel.fromJson(element));
       }); // 顶部轮播组件数
       setState(() {
-        allCategoryLists.sublist(0, 2).forEach((CategoryModel item) {
-          categoryList.add(CategoryComponent(
-              category: item.category,
-              classify: item.classify
-          ));
-        });
+        categoryList.addAll(allCategoryLists.sublist(0, 2));
       });
     });
     super.initState();
@@ -97,10 +88,18 @@ class MovieHomeComponentState extends State<MovieHomeComponent>
           Expanded(
               flex: 1,
               child: EasyRefresh(
-                  footer: MaterialFooter(),
+                  controller: easyRefreshController,
+                  footer: ClassicalFooter(
+                    loadText: '上拉加载',
+                    loadReadyText: '准备加载',
+                    loadingText: '加载中...',
+                    loadedText: '加载完成',
+                    noMoreText: '没有更多',
+                    bgColor: Colors.transparent,
+                    textColor: ThemeColors.disableColor,
+                  ),
                   onLoad: () async {
-                    pageNum++;
-                    if (pageNum >= allCategoryLists.length) {
+                    if (categoryList.length == allCategoryLists.length) {
                       useToast('已经到底了');
                     } else {
                       _getCategoryItem();
@@ -115,7 +114,10 @@ class MovieHomeComponentState extends State<MovieHomeComponent>
                         ],
                       ),
                       Column(
-                        children: categoryList,
+                        children: categoryList.map((item) => CategoryComponent(
+                          category: item.category,
+                          classify: item.classify,
+                        )).toList(),
                       )
                     ],
                   )))
