@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:players/movie/model/MovieDetailModel.dart';
+import '../movie/model/MovieDetailModel.dart';
 
 import '../movie/pages/MovieDetailPage.dart';
 import '../movie/pages/MovieIndexPage.dart';

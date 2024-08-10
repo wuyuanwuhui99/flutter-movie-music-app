@@ -1,4 +1,4 @@
-name: players
+name: flutter_movie_music_app
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -47,7 +47,7 @@ dependencies:
   crypto: ^3.0.3
   convert: ^3.1.1
   carousel_slider: ^4.2.1
-  webview_flutter: ^4.8.0
+#  webview_flutter: ^4.8.0
 
 dev_dependencies:
   flutter_test:

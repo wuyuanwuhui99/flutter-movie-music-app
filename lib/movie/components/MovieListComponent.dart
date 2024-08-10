@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:players/theme/ThemeColors.dart';
+import '../../theme/ThemeColors.dart';
 import '../../common/constant.dart';
 import '../../router/index.dart';
 import '../model/MovieDetailModel.dart';

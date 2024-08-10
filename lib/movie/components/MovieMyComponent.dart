@@ -12,7 +12,7 @@ import '../../theme/ThemeStyle.dart';
 import '../../theme/ThemeSize.dart';
 import '../../theme/ThemeColors.dart';
 import '../model/MovieDetailModel.dart';
-import '../pages/WebViewPage.dart';
+// import '../pages/WebViewPage.dart';
 
 class MovieMyComponent extends StatefulWidget {
   MovieMyComponent({super.key});
@@ -371,15 +371,15 @@ class _MovieMyComponentState extends State<MovieMyComponent>
               padding: EdgeInsets.only(bottom: ThemeSize.containerPadding,top: ThemeSize.containerPadding),
               child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => WebViewPage(
-                                url: "http://192.168.0.103:3003/#/?_t=" +
-                                    DateTime.now()
-                                        .microsecondsSinceEpoch
-                                        .toString(),
-                                title: "电影圈")));
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => WebViewPage(
+                    //             url: "http://192.168.0.103:3003/#/?_t=" +
+                    //                 DateTime.now()
+                    //                     .microsecondsSinceEpoch
+                    //                     .toString(),
+                    //             title: "电影圈")));
                   },
                   child: Row(
                     children: <Widget>[
