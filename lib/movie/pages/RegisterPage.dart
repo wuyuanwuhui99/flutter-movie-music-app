@@ -4,7 +4,7 @@ import '../../theme/ThemeColors.dart';
 import '../../theme/ThemeSize.dart';
 
 class RegisterPage extends StatefulWidget {
-  RegisterPage({super.key});
+  const RegisterPage({super.key});
 
   @override
   RegisterPageState createState() => RegisterPageState();
@@ -31,19 +31,19 @@ class RegisterPageState extends State<RegisterPage> {
     return Scaffold(
         body: Form(
             child: Padding(
-      padding: EdgeInsets.only(left: 20,right: 20,top: 20),
+      padding: EdgeInsets.only(left: ThemeSize.containerPadding,right: ThemeSize.containerPadding,top: ThemeSize.containerPadding),
       child: Column(
         children: <Widget>[
           Row(
             children: <Widget>[
-              Container(
-                child: Text("用户名"),
+              const SizedBox(
                 width: 80,
+                child: Text("用户名"),
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "请输入用户名",
                   ),
                   onChanged: (value) {},
@@ -54,17 +54,17 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
-                child: Text("密码"),
+              const SizedBox(
                 width: 80,
+                child: Text("密码"),
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "请输入密码",
                   ),
                   onChanged: (value) {},
@@ -75,17 +75,17 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
-                child: Text("确认密码"),
+              const SizedBox(
                 width: 80,
+                child: Text("确认密码"),
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "确认密码",
                   ),
                   onChanged: (value) {},
@@ -96,17 +96,17 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
-                child: Text("昵称"),
+              const SizedBox(
                 width: 80,
+                child: Text("昵称"),
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "请输入昵称",
                   ),
                   onChanged: (value) {},
@@ -117,17 +117,17 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
-                child: Text("电话"),
+              const SizedBox(
                 width: 80,
+                child: Text("电话"),
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "请输入电话号码",
                   ),
                   onChanged: (value) {},
@@ -138,17 +138,17 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
+              const SizedBox(
+                width: 80,
                 child: Text("邮箱"),
-                width: 80,
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "请输入邮箱地址",
                   ),
                   onChanged: (value) {},
@@ -159,17 +159,17 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
+              const SizedBox(
+                width: 80,
                 child: Text("出生年月日"),
-                width: 80,
               ),
               Expanded(
                 flex: 1,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "请输入邮箱地址",
                   ),
                   onChanged: (value) {},
@@ -180,25 +180,25 @@ class RegisterPageState extends State<RegisterPage> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: ThemeSize.smallMargin),
           Row(
             children: <Widget>[
-              Container(
-                child: Text("性别"),
+              const SizedBox(
                 width: 80,
+                child: Text("性别"),
               ),
               Expanded(
                 flex: 1,
                 child: Row(
                   children: <Widget>[
-                    Text("男"),
+                    const Text("男"),
                     Radio<int>(
                         value: 0,
                         groupValue: groupValue,
                         // title: Text("男"),
                         onChanged: handleRadioValueChanged),
-                    SizedBox(width: 20),
-                    Text("女"),
+                    SizedBox(width: ThemeSize.containerPadding),
+                    const Text("女"),
                     Radio<int>(
                         value: 1,
                         groupValue: groupValue,

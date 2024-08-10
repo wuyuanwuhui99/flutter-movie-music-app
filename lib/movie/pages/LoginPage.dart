@@ -138,7 +138,7 @@ class LoginPage extends StatelessWidget {
                                 hintStyle: TextStyle(
                                     fontSize: ThemeSize.smallFontSize,
                                     color: Colors.grey),
-                                contentPadding: EdgeInsets.only(left: 0.0),
+                                contentPadding: const EdgeInsets.only(left: 0.0),
                                 border: InputBorder.none,
                               ))),
                       SizedBox(height: ThemeSize.containerPadding),
