@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
-import '../../utils/HttpUtil%20.dart';
+import '../../utils/HttpUtil.dart';
 import '../../utils/LocalStorageUtils.dart';
 import 'package:provider/provider.dart';
 import '../components/MovieFilmComponent.dart';
@@ -33,11 +33,11 @@ class MovieIndexPageState extends State<MovieIndexPage> {
   Widget? _getPage() {
     if (pages[_currentIndex] == null) {
       if (_currentIndex == 0) {
-        pages[_currentIndex] = MovieHomeComponent();
+        pages[_currentIndex] = const MovieHomeComponent();
       } else if (_currentIndex == 1) {
         pages[_currentIndex] = MovieFilmComponent();
       } else if (_currentIndex == 2) {
-        pages[_currentIndex] = MovieTVComponent();
+        pages[_currentIndex] = const MovieTVComponent();
       } else if (_currentIndex == 3) {
         pages[_currentIndex] = MovieMyComponent();
       }

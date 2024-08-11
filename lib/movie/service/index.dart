@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import '../../common/config.dart';
 import '../model/LoginModel.dart';
 import '../api/index.dart';
-import '../../utils/HttpUtil .dart';
+import '../../utils/HttpUtil.dart';
 import '../../utils/LocalStorageUtils.dart';
 import '../model/MovieDetailModel.dart';
 
@@ -53,7 +53,7 @@ Future<ResponseModel<dynamic>> getKeyWordService(String classify) async {
 }
 
 //按classify大类查询所有catory小类
-Future<ResponseModel<List<Map>>> getAllCategoryByClassifyService(
+Future<ResponseModel<List<dynamic>>> getAllCategoryByClassifyService(
     String classify) async {
   try {
     Response response = await HttpUtil.getInstance().dio.get(servicePath['getAllCategoryByClassify']!,

@@ -3,13 +3,9 @@ import '../../utils/common.dart';
 import '../model/LoginModel.dart';
 import '../../router/index.dart';
 import '../service/index.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import '../../utils/crypto.dart';
-import '../pages/MovieIndexPage.dart';
 import '../provider/UserInfoProvider.dart';
 import 'package:provider/provider.dart';
 import '../../utils/LocalStorageUtils.dart';
-import 'RegisterPage.dart';
 import '../model/UserInfoModel.dart';
 import '../../theme/ThemeStyle.dart';
 import '../../theme/ThemeSize.dart';
@@ -20,7 +16,7 @@ class LoginPage extends StatelessWidget {
   bool loading = false;
   late UserInfoProvider provider;
   late BuildContext myContext;
-  final LoginModel loginModel = LoginModel(userId:'',password: '');
+  final LoginModel loginModel = LoginModel(userId:'吴时吴刻',password: '123456');
 
 
   ///@author: wuwenqiang
@@ -39,7 +35,7 @@ class LoginPage extends StatelessWidget {
           String token = res.token!;
           LocalStorageUtils.setToken(token);
           provider.setUserInfo(UserInfoModel.fromJson(res.data));
-          Routes.router.navigateTo(myContext, '/MusicIndexPage', replace: true);
+          Routes.router.navigateTo(myContext, '/MovieIndexPage', replace: true);
         }else{
           useToast("账号或密码错误");
         }

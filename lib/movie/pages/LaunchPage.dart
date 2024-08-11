@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../router/index.dart';
 import '../service/index.dart';
-import '../../utils/HttpUtil .dart';
+import '../../utils/HttpUtil.dart';
 import '../provider/UserInfoProvider.dart';
 import 'package:provider/provider.dart';
 import '../../utils/LocalStorageUtils.dart';
