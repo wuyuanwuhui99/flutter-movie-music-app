@@ -224,9 +224,9 @@ class _MovieUserPageState extends State<MovieUserPage> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Expanded(
-                                    child: Text("昵称"),
+                                  const Expanded(
                                     flex: 1,
+                                    child: Text("昵称"),
                                   ),
                                   Text(provider.userInfo.username),
                                   SizedBox(width: ThemeSize.smallMargin),
@@ -254,9 +254,9 @@ class _MovieUserPageState extends State<MovieUserPage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
-                                      Expanded(
-                                        child: Text("电话"),
+                                      const Expanded(
                                         flex: 1,
+                                        child: Text("电话"),
                                       ),
                                       Text(provider.userInfo.telephone),
                                       SizedBox(width: ThemeSize.smallMargin),
@@ -278,9 +278,9 @@ class _MovieUserPageState extends State<MovieUserPage> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Expanded(
-                                    child: Text("邮箱"),
+                                  const Expanded(
                                     flex: 1,
+                                    child: Text("邮箱"),
                                   ),
                                   Text(provider.userInfo.email),
                                   SizedBox(width: ThemeSize.smallMargin),
@@ -301,9 +301,9 @@ class _MovieUserPageState extends State<MovieUserPage> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Expanded(
-                                      child: Text("出生年月日"),
+                                    const Expanded(
                                       flex: 1,
+                                      child: Text("出生年月日"),
                                     ),
                                     Text(provider.userInfo.birthday ?? ""),
                                     SizedBox(width: ThemeSize.smallMargin),
@@ -330,13 +330,11 @@ class _MovieUserPageState extends State<MovieUserPage> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Expanded(
-                                      child: Text("性别"),
+                                    const Expanded(
                                       flex: 1,
+                                      child: Text("性别"),
                                     ),
-                                    Text(provider.userInfo?.sex != null
-                                        ? SexValueMap[provider?.userInfo.sex]
-                                        : ''),
+                                    Text(SexValueMap[provider.userInfo.sex]??''),
                                     SizedBox(width: ThemeSize.smallMargin),
                                     Image.asset(
                                         "lib/assets/images/icon_arrow.png",
